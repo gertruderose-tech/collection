@@ -1,0 +1,17 @@
+tnhb####\VPJ####D>82(###,& 
+GNU bash, version %s-(
+ hl^$0ftD;,%wbeWBE|*
+'''' !"#''''$%&'''''()*+'''',-./''''0123''''4567''''89:;''''<=>?''''@ABC''''DEFG''''HIJK''''LMNO''''QRST''''UVWX''''YZ[\''''^_jk''''rstu''''
+ 9999!#$`9999abcd9999efgh9999ijkl9999mnop9999qrst9999uvwx9999yz{|9999}~
+STUV9999WXYZ9999[\]^9999_
+rrrr !"#rrrr$%&'rrrr()*+rrrr,-./rrrr0123rrrr4567rrrr89:;rrrr<=>?rrrr@ABCrrrrDEFGrrrrHIJKrrrrLMNOrrrrPQRSrrrrTUVWrrrrXYZ[$qrr\]^
+ !"9999#$%&9999'()*9999+,-.9999/012999934569999789:9999;<=>9999?@AB9999CDEF9999GHIJ9999KLMN9999OPQR9999STVW9999XYZ[9999\]^_9999`abc9999defg9999hijk9999lmno9999pqrs9999tuvw9999xyz{9999|}~
+}fay.jk,{bz.r.oye.)u~|VJ
+%vmjr%a`,piq%y%drn%"
+_zzQ??OTZL^H_>VYyxXKo[=?<HQgVEXo+
+9woi;:f^96g_}IatKJlw_iT
+;J6Fak]xe[L\}_=E]]^JY:V7T~
+-5.0 wants memfd_crea
+$Info: This file is packed with the UPX executable packer http://upx.sf.net $
+$Id: UPX 5.02 Copyright (C) 1996-2025 the UPX Team. All Rights Reserved. $
+GCC: (Ubuntu 9.4.0-1u

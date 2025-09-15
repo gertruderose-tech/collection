@@ -1,0 +1,72 @@
+FORENSIC ANALYSIS SUMMARY
+========================
+Generated: Mon Sep 15 07:46:28 UTC 2025
+Analyst: Automated Analysis Script
+Binary: requirement
+
+FILE INFORMATION:
+-rw-rw-r-- 1 runner runner 1093848 Sep 15 07:43 /home/runner/work/collection/collection/requirement
+
+FILE TYPE:
+/home/runner/work/collection/collection/requirement: ELF 64-bit LSB executable, x86-64, version 1 (GNU/Linux), BuildID[sha1]=79c58a2a94970f0131dfea1270704e9a3697ca42, for GNU/Linux 3.2.0, statically linked, no section header
+
+CRYPTOGRAPHIC HASHES:
+SHA256: e636d9f7a45be4031e7ebce1f501e50086ae10b1c65feb48ab0c64a6bf582768  /home/runner/work/collection/collection/evidence/requirement.bin
+SHA1: 16b5baffc1df9140a395bc5ba5f041b6c24bc04d  /home/runner/work/collection/collection/evidence/requirement.bin
+MD5: 6580249ff86e54962b219a2bb7f27e62  /home/runner/work/collection/collection/evidence/requirement.bin
+
+SUSPICIOUS PATTERNS FOUND:
+
+CRYPTO PATTERNS:
+jsha
+/shadow
+
+FILESYSTEM PATTERNS:
+/var/mai
+/etc/locp
+
+NETWORK PATTERNS:
+$Info: This file is packed with the UPX executable packer http://upx.sf.net $
+
+PACKER PATTERNS:
+RPhupX
+UPX!u`
+$Info: This file is packed with the UPX executable packer http://upx.sf.net $
+$Id: UPX 5.02 Copyright (C) 1996-2025 the UPX Team. All Rights Reserved. $
+
+SHELL PATTERNS:
+/bin/sh;
+GNU bash, version %s-(
+Shell
+BASH_ENV
+
+RECOMMENDATIONS:
+1. DO NOT execute this binary on production systems
+2. Further analysis should be conducted in isolated environments
+3. Consider dynamic analysis with memory dumps if execution is necessary
+4. Monitor for similar binaries using the provided IOCs
+
+EVIDENCE COLLECTED:
+/home/runner/work/collection/collection/evidence/analysis_summary.txt
+/home/runner/work/collection/collection/evidence/requirement.bin
+/home/runner/work/collection/collection/evidence/requirement.bin.md5
+/home/runner/work/collection/collection/evidence/requirement.bin.sha1
+/home/runner/work/collection/collection/evidence/requirement.bin.sha256
+/home/runner/work/collection/collection/evidence/requirement.filetype
+/home/runner/work/collection/collection/evidence/requirement.metadata
+/home/runner/work/collection/collection/evidence/static_analysis/crypto_patterns.txt
+/home/runner/work/collection/collection/evidence/static_analysis/elf_header.txt
+/home/runner/work/collection/collection/evidence/static_analysis/file_type.txt
+/home/runner/work/collection/collection/evidence/static_analysis/filesystem_patterns.txt
+/home/runner/work/collection/collection/evidence/static_analysis/network_patterns.txt
+/home/runner/work/collection/collection/evidence/static_analysis/packer_patterns.txt
+/home/runner/work/collection/collection/evidence/static_analysis/program_headers.txt
+/home/runner/work/collection/collection/evidence/static_analysis/section_headers.txt
+/home/runner/work/collection/collection/evidence/static_analysis/shell_patterns.txt
+/home/runner/work/collection/collection/evidence/static_analysis/strings_min20.txt
+/home/runner/work/collection/collection/evidence/static_analysis/strings_min4.txt
+/home/runner/work/collection/collection/evidence/static_analysis/strings_min8.txt
+/home/runner/work/collection/collection/evidence/unpacking/header_hex.txt
+/home/runner/work/collection/collection/evidence/unpacking/tail_hex.txt
+/home/runner/work/collection/collection/evidence/unpacking/upx_test.log
+/home/runner/work/collection/collection/evidence/unpacking/upx_unpack.log

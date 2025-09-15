@@ -1,0 +1,4 @@
+/bin/sh;
+GNU bash, version %s-(
+Shell
+BASH_ENV
