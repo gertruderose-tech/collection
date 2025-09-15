@@ -74,9 +74,9 @@ test_string_detection() {
     fi
     
     # Test for bash signatures
-    if strings "${BINARY}" | grep -q "GNU bash\|BASH_ENV"; then
+    if strings "${BINARY}" | grep -qE "GNU bash|BASH_ENV"; then
         bash_found=true
-        success "Bash signature detected"
+        success "Bash signature detected (GNU bash, BASH_ENV)"
     else
         fail "Bash signature not found"
     fi
