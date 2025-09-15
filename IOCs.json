@@ -1,0 +1,68 @@
+{
+  "title": "IOCs for Suspicious 'requirement' Binary",
+  "description": "Indicators of Compromise for packed executable with embedded bash shell capabilities",
+  "generated_date": "2025-09-15",
+  "analyst": "Automated Forensic Analysis",
+  "threat_level": "HIGH",
+  "iocs": {
+    "file_hashes": {
+      "sha256": "e636d9f7a45be4031e7ebce1f501e50086ae10b1c65feb48ab0c64a6bf582768",
+      "sha1": "16b5baffc1df9140a395bc5ba5f041b6c24bc04d",
+      "md5": "6580249ff86e54962b219a2bb7f27e62"
+    },
+    "file_properties": {
+      "filename": "requirement",
+      "file_size": 1093848,
+      "file_type": "ELF 64-bit LSB executable, x86-64",
+      "build_id": "79c58a2a94970f0131dfea1270704e9a3697ca42",
+      "static_linked": true,
+      "no_section_headers": true
+    },
+    "strings": {
+      "upx_signatures": [
+        "$Info: This file is packed with the UPX executable packer http://upx.sf.net $",
+        "$Id: UPX 5.02 Copyright (C) 1996-2025 the UPX Team. All Rights Reserved. $",
+        "UPX!",
+        "RPhupX"
+      ],
+      "bash_indicators": [
+        "GNU bash, version %s-(",
+        "BASH_ENV",
+        "/bin/sh;",
+        "Shell"
+      ],
+      "filesystem_references": [
+        "/var/mai",
+        "/etc/locp"
+      ],
+      "crypto_indicators": [
+        "jsha",
+        "/shadow"
+      ]
+    },
+    "behavioral_indicators": {
+      "self_deletion": "Binary removes itself from disk after execution",
+      "memory_execution": "Extracts and executes embedded content from memory",
+      "embedded_shell": "Contains embedded bash shell functionality",
+      "anti_analysis": "UPX signatures present but standard unpacking fails"
+    }
+  },
+  "detection_rules": {
+    "yara_rule_name": "Suspicious_Requirement_Binary",
+    "sigma_rule": "process_creation_suspicious_requirement_binary",
+    "snort_rule": "alert tcp any any -> any any (msg:\"Suspicious requirement binary download\"; content:\"|7f|ELF\"; offset:0; depth:4; content:\"UPX\"; sid:1000001;)"
+  },
+  "mitigation": {
+    "recommendations": [
+      "Block execution of files matching these IOCs",
+      "Monitor for similar packed executables with embedded shells",
+      "Implement application whitelisting to prevent unauthorized executable execution",
+      "Use endpoint detection and response (EDR) tools to monitor for self-deleting executables"
+    ],
+    "hunting_queries": {
+      "file_hash_search": "sha256:e636d9f7a45be4031e7ebce1f501e50086ae10b1c65feb48ab0c64a6bf582768",
+      "filename_pattern": "filename:requirement",
+      "process_pattern": "./requirement OR process_name:requirement"
+    }
+  }
+}
